@@ -1,3 +1,16 @@
 # jam capture
 
 A simple time-lapse screen capture script for OSX.
+
+This was created for me to use during game jams, you may find it useful, enjoy!
+
+## usage
+
+Run capture.py when you want to record your screen. Ctrl-C when you want to stop. As long as you leave the captured images in the images folder capture.py will pick up where it left off.
+
+Run encode.sh to combine the images into a .mov video file using ffmpeg.
+
+## requirements
+
+- OSX
+- ffmpeg for encoding
