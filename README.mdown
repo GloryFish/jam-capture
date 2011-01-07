@@ -1,0 +1,3 @@
+# jam capture
+
+A simple time-lapse screen capture script for OSX.
