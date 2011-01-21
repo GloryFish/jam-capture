@@ -4,8 +4,14 @@ import os
 import time
 
 def sort_filename(a, b):
-    a_num = int(a.split('.')[0].split('-')[-1])
-    b_num = int(b.split('.')[0].split('-')[-1])
+    try:
+        a_num = int(a.split('.')[0].split('-')[-1])
+    except:
+        return -1
+    try:
+        b_num = int(b.split('.')[0].split('-')[-1])
+    except:
+        return 1
 
     if a_num == b_num:
         return 0
@@ -21,7 +27,11 @@ if len(files) == 0:
     count = 1
 else:
     files.sort(sort_filename)
-    count = int(files[-1].split('.')[0].split('-')[-1]) + 1
+    count = files[-1].split('.')[0].split('-')[-1]
+    if count == '':
+        count = 1
+    else:
+        count = int(count) + 1
 
 print "Starting image capture from #%d" % count
 
