@@ -2,6 +2,7 @@
 
 import os
 import time
+import sys
 
 def sort_filename(a, b):
     try:
@@ -19,9 +20,14 @@ def sort_filename(a, b):
         return -1
     else:
         return 1
+try:
+    directory = sys.argv[1]
+except:
+    print 'Please specify a directory for this capture session'
+    exit()
 
 # Find latest image number
-files = os.listdir('images')
+files = os.listdir(directory)
 
 if len(files) == 0:
     count = 1
@@ -35,7 +41,7 @@ else:
 
 print "Starting image capture from #%d" % count
 
-name = 'gamejam'
+name = 'screenshot'
 delay = 5
 
 while True:

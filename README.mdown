@@ -6,11 +6,21 @@ This was created for me to use during game jams, you may find it useful, enjoy!
 
 ## usage
 
-Run capture.py when you want to record your screen. Ctrl-C when you want to stop. As long as you leave the captured images in the images folder capture.py will pick up where it left off.
+    capture.py [directory]
 
-Run encode.sh to combine the images into a .mov video file using ffmpeg.
+Run capture.py with a directory when you want to record your screen. Ctrl-C when you want to stop. 
+
+Leave the captured images in the directory and capture.py will pick up where it left off.
+
+You can have multiple capture sessions in different directories.
+
+## making a movie
+
+Run encode.sh and pass in the directory of images to combine them into a .mov video file using ffmpeg.
 
 ## requirements
 
 - OSX
 - ffmpeg for encoding
+
+Using Homebrew? it's just <pre>brew install ffmpeg</pre>
