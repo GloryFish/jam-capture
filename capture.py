@@ -46,7 +46,7 @@ delay = 5
 
 while True:
     
-    filename = "images/%s-%i.png" % (name, count)
+    filename = "%s/%s-%i.png" % (directory.rstrip('/'), name, count)
     
     os.system("screencapture -x %s" % filename)
     
